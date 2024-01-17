@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>DMD</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <h1 class="header__title">DMD</h1>
+        <div class="header__menu">
+          <p class="header__menu-item">QUEM SOMOS</p>
+          <p class="header__menu-item">EVENTOS</p>
+          <p class="header__menu-item">CONTATO</p>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="banner">
+        <div class="banner__img-1 fade mySlides"></div>
+        <div class="banner__img-2 fade mySlides"></div>
+        <div class="banner__img-3 fade mySlides"></div>
+      </section>
+      <section class="about">
+        <h1 class="about__title">Sobre Nós</h1>
+        <p class="about__text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
+          explicabo voluptates numquam nobis fugit consequatur placeat!
+          Doloribus porro officiis dolor omnis suscipit in consequuntur officia,
+          quas natus fuga iste voluptatibus.
+        </p>
+        <div class="about__images">
+          <div class="about__images__container">
+            <img
+              class="about__images__container-item-2"
+              src="/public/teste3.jpg"
+              onclick="openImageViewer(this)"
+              alt="Image 2"
+            />
+            <img
+              class="about__images__container-item-2"
+              src="/public/teste.jpg"
+              onclick="openImageViewer(this)"
+              alt="Image 2"
+            />
+          </div>
+          <div class="about__images__container">
+            <img
+              name="teste"
+              class="about__images__container-item-1"
+              src="/public/teste.jpg"
+              onclick="openImageViewer(this)"
+              alt="Image 1"
+            />
+            <img
+              class="about__images__container-item-2"
+              src="/public/teste2.jpg"
+              onclick="openImageViewer(this)"
+              alt="Image 2"
+            />
+          </div>
+          <div class="about__images__container hidden">
+            <img src="/public/teste.jpg" alt="Image 1" />
+            <img src="/public/teste.jpg" alt="Image 2" />
+            <img src="/public/teste.jpg" alt="Image 2" />
+            <img src="/public/teste.jpg" alt="Image 2" />
+            <img src="/public/teste.jpg" alt="Image 2" />
+            <img src="/public/teste.jpg" alt="Image 2" />
+          </div>
+        </div>
+
+        <div id="image-viewer">
+          <div class="container">
+            <button class="next" onclick="prevImage()">&#60;</button>
+            <img id="full-image" src="" alt="Full Image" />
+            <button class="next next2" onclick="nextImage()">&#62;</button>
+            <button class="close" onclick="closeImageViewer()">×</button>
+          </div>
+        </div>
+
+        <span onclick="openImageViewer(teste)" class="about__link"
+          >Veja toda nossa estrutura</span
+        >
+      </section>
+    </main>
+  </body>
+  <script src="main.js"></script>
+</html>
