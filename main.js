@@ -6,6 +6,7 @@ window.onscroll = function () {
 var header = document.querySelector(".header");
 var headerTitle = document.querySelector(".header__title");
 var sticky = header.offsetTop;
+var menuItems = document.getElementsByClassName("header__menu-item");
 
 var slideIndex = 0;
 
@@ -13,9 +14,17 @@ function scrollHeader() {
   if (window.scrollY > sticky) {
     header.classList.add("header--background-white");
     headerTitle.classList.add("header--title-hidden");
+
+    for (var i = 0; i < menuItems.length; i++) {
+      menuItems[i].style.color = "#010101";
+    }
   } else {
     header.classList.remove("header--background-white");
     headerTitle.classList.remove("header--title-hidden");
+
+    for (var i = 0; i < menuItems.length; i++) {
+      menuItems[i].style.color = "white";
+    }
   }
 }
 
@@ -35,34 +44,36 @@ function carousel() {
   setTimeout(carousel, 5000);
 }
 
-//Função do Image Viewer
+//Funções do Image Viewer
 var currentImageIndex = 0;
 var images = document.querySelectorAll(".about__images__container img");
 var imageViewer = document.getElementById("image-viewer");
 var fullImage = document.getElementById("full-image");
+var moreImages = document.querySelector(".about__images__container-hidden");
 
 function openImageViewer(clickedImage) {
-  console.log(clickedImage);
   currentImageIndex = Array.from(images).indexOf(clickedImage);
-
   showImage();
 }
-
 function showImage() {
   fullImage.src = images[currentImageIndex].src;
   imageViewer.style.display = "block";
 }
-
 function closeImageViewer() {
   imageViewer.style.display = "none";
 }
-
 function prevImage() {
   currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
   showImage();
 }
-
 function nextImage() {
   currentImageIndex = (currentImageIndex + 1) % images.length;
   showImage();
+}
+function openMoreImages() {
+  if (moreImages.className == "about__images__container-hidden open--images") {
+    moreImages.classList.remove("open--images");
+  } else {
+    moreImages.classList.add("open--images");
+  }
 }

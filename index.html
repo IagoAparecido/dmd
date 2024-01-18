@@ -9,7 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
     <link rel="stylesheet" href="style.css" />
+
     <title>DMD</title>
   </head>
   <body>
@@ -17,19 +20,21 @@
       <nav class="header__nav">
         <h1 class="header__title">DMD</h1>
         <div class="header__menu">
-          <p class="header__menu-item">QUEM SOMOS</p>
-          <p class="header__menu-item">EVENTOS</p>
-          <p class="header__menu-item">CONTATO</p>
+          <a href="#about" class="header__menu-item">QUEM SOMOS</a>
+          <a href="#events" class="header__menu-item">EVENTOS</a>
+          <a href="#contact" class="header__menu-item">CONTATO</a>
         </div>
       </nav>
     </header>
     <main>
+      <!-- BANNER -->
       <section class="banner">
         <div class="banner__img-1 fade mySlides"></div>
         <div class="banner__img-2 fade mySlides"></div>
         <div class="banner__img-3 fade mySlides"></div>
       </section>
-      <section class="about">
+      <!-- SOBRE -->
+      <section id="about" class="about">
         <h1 class="about__title">Sobre Nós</h1>
         <p class="about__text">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
@@ -46,12 +51,13 @@
               alt="Image 2"
             />
             <img
-              class="about__images__container-item-2"
+              class="about__images__container-item-1"
               src="/public/teste.jpg"
               onclick="openImageViewer(this)"
               alt="Image 2"
             />
           </div>
+
           <div class="about__images__container">
             <img
               name="teste"
@@ -67,14 +73,41 @@
               alt="Image 2"
             />
           </div>
-          <div class="about__images__container hidden">
-            <img src="/public/teste.jpg" alt="Image 1" />
-            <img src="/public/teste.jpg" alt="Image 2" />
-            <img src="/public/teste.jpg" alt="Image 2" />
-            <img src="/public/teste.jpg" alt="Image 2" />
-            <img src="/public/teste.jpg" alt="Image 2" />
-            <img src="/public/teste.jpg" alt="Image 2" />
+
+          <div class="about__images__container-hidden">
+            <div class="about__images__container">
+              <img
+                class="about__images__container-item-2"
+                src="/public/teste3.jpg"
+                onclick="openImageViewer(this)"
+                alt="Image 2"
+              />
+              <img
+                class="about__images__container-item-2"
+                src="/public/teste.jpg"
+                onclick="openImageViewer(this)"
+                alt="Image 2"
+              />
+            </div>
+            <div class="about__images__container">
+              <img
+                name="teste"
+                class="about__images__container-item-1"
+                src="/public/teste.jpg"
+                onclick="openImageViewer(this)"
+                alt="Image 1"
+              />
+              <img
+                class="about__images__container-item-2"
+                src="/public/teste2.jpg"
+                onclick="openImageViewer(this)"
+                alt="Image 2"
+              />
+            </div>
           </div>
+          <span onclick="openMoreImages()" class="about__link"
+            >Veja toda nossa estrutura</span
+          >
         </div>
 
         <div id="image-viewer">
@@ -85,12 +118,133 @@
             <button class="close" onclick="closeImageViewer()">×</button>
           </div>
         </div>
+      </section>
+      <!-- EVENTOS -->
+      <section id="events" class="events">
+        <div class="events__background"></div>
+        <div class="events__content">
+          <h1 class="events__title">Eventos</h1>
 
-        <span onclick="openImageViewer(teste)" class="about__link"
-          >Veja toda nossa estrutura</span
-        >
+          <p class="about__text">Alguns dos eventos da DMD</p>
+
+          <div class="events__images">
+            <div class="events__images__container">
+              <div class="events__images__container-item-1" alt="Image 2">
+                <p class="events__images__container-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
+                  eos reiciendis vel? Porro, laborum accusantium veniam maxime
+                  atque libero.
+                </p>
+              </div>
+              <div class="events__images__container-item-2" alt="Image 2">
+                <p class="events__images__container-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
+                  eos reiciendis vel? Porro, laborum accusantium veniam maxime
+                  atque libero.
+                </p>
+              </div>
+            </div>
+
+            <div class="events__images__container">
+              <div class="events__images__container-item-3" alt="Image 2">
+                <p class="events__images__container-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
+                  eos reiciendis vel? Porro, laborum accusantium veniam maxime
+                  atque libero.
+                </p>
+              </div>
+              <div class="events__images__container-item-4" alt="Image 2">
+                <p class="events__images__container-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
+                  eos reiciendis vel? Porro, laborum accusantium veniam maxime
+                  atque libero.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div id="image-viewer">
+            <div class="container">
+              <button class="next" onclick="prevImage()">&#60;</button>
+              <img id="full-image" src="" alt="Full Image" />
+              <button class="next next2" onclick="nextImage()">&#62;</button>
+              <button class="close" onclick="closeImageViewer()">×</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CONTATO -->
+      <section id="contact" class="contact">
+        <div class="contact__container">
+          <h1 class="contact__title">Endereço</h1>
+          <div class="contact__content">
+            <div class="contact__map">
+              <div class="mapouter">
+                <div class="gmap_canvas">
+                  <iframe
+                    width="100%"
+                    height="335"
+                    id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=Aquarela+-+Rua+Graciliano+Ramos%2C+lote+78+Aquarela+Das+Artes%2C+Sinop+-+MT%2C+78555-902&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0"
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"
+                  ></iframe
+                  ><style>
+                    .mapouter {
+                      position: relative;
+                      text-align: right;
+
+                      width: 100%;
+                    }</style
+                  ><style>
+                    .gmap_canvas {
+                      overflow: hidden;
+                      background: none !important;
+                      width: 100%;
+                    }
+                  </style>
+                </div>
+              </div>
+              <a class="contact__map__link" href="#">
+                <i style="font-size:32px" class="fa">&#xf232;</i>
+                Solicite a locação diretamente por WhatsApp: (66) 99915-7400
+              </a>
+            </div>
+            <div class="contact__container__form">
+              <p class="contact__form__text">
+                Nos envie uma mensagem, e assim que possível entraremos em
+                contato!
+              </p>
+              <form class="contact__form">
+                <input placeholder="Nome" class="contact__input" type="text" />
+                <input
+                  placeholder="E-mail"
+                  class="contact__input"
+                  type="email"
+                />
+                <input
+                  placeholder="Telefone"
+                  class="contact__input"
+                  type="text"
+                />
+                <textarea
+                  placeholder="Escreva sua mensagem..."
+                  class="contact__input"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+                <button class="contact__button">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
+    <footer class="footer">
+      Footer
+    </footer>
   </body>
   <script src="main.js"></script>
 </html>
