@@ -36,6 +36,7 @@ a {
 .header__menu-item {
   font-weight: 500;
   cursor: pointer;
+  color: white;
 }
 .header__menu-item:hover {
   text-decoration: underline;
@@ -69,7 +70,7 @@ a {
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("/public/teste.jpg");
+    url("./public/teste.jpg");
 }
 .banner__img-2 {
   background-image: linear-gradient(
@@ -77,7 +78,7 @@ a {
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("/public/teste2.jpg");
+    url("./public/teste2.jpg");
 }
 .banner__img-3 {
   background-image: linear-gradient(
@@ -85,12 +86,12 @@ a {
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("/public/teste3.jpg");
+    url("./public/teste3.jpg");
 }
 
 /* ABOUT */
 .about {
-  width: 1200px;
+  max-width: 1200px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -106,7 +107,7 @@ a {
 .about__images {
   display: flex;
   justify-content: space-around;
-  width: 1200px;
+  width: 100%;
   gap: 5px;
   flex-direction: column;
 }
@@ -116,26 +117,19 @@ a {
   gap: 5px;
   display: flex;
   position: relative;
-  /* flex-wrap: wrap; */
+}
+.about__images__container-hidden {
+  display: none;
 }
 .about__images__container-item-1 {
-  background-image: linear-gradient(
-    180deg,
-    rgb(170, 170, 170) 100%,
-    rgba(170, 170, 170, 0) 100%
-  );
-  width: 55%;
+  width: 47%;
+
   height: 280px;
   cursor: pointer;
   transition: 0.3s;
 }
 .about__images__container-item-2 {
-  background-image: linear-gradient(
-    180deg,
-    rgb(170, 170, 170) 100%,
-    rgba(170, 170, 170, 0) 100%
-  );
-  width: 65%;
+  width: 53%;
   height: 280px;
   cursor: pointer;
   transition: 0.3s;
@@ -150,7 +144,13 @@ a {
   color: #0075b9;
   cursor: pointer;
 }
+.open--images {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 
+/* VIEWER */
 #image-viewer {
   display: none;
   position: fixed;
@@ -161,7 +161,7 @@ a {
   background: rgba(0, 0, 0, 0.9);
   text-align: center;
   z-index: 1000;
-  overflow-y: auto; /* Adicionado para rolar em caso de muitas imagens */
+  overflow-y: auto;
 }
 
 #image-viewer .container {
@@ -171,26 +171,217 @@ a {
   justify-content: center;
   height: 100%;
   margin: 0 auto;
-  padding: 50px;
 }
-
 #image-viewer img {
   max-width: 100%;
   max-height: 100%;
 }
 #image-viewer .container .close {
   position: absolute;
-  font-size: 50px;
-  color: #0a0a0a;
+  right: 15%;
+  top: 0;
+  border: none;
+  color: white;
   cursor: pointer;
-  top: 49px;
-  right: 150px;
-  background-color: white;
 }
 #image-viewer .container button {
-  padding: 10px;
-  font-size: 50px;
+  padding: 20px;
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.521);
+  font-size: 30px;
+  border: none;
+  color: white;
+  margin-left: -55px;
+  margin-right: -55px;
+  z-index: 1;
+}
+
+/* EVENTS */
+.events {
+  width: 100%;
+  min-height: 900px;
+  position: relative;
+  overflow: hidden;
+}
+.events__background {
+  position: absolute;
+  top: 50px;
+  width: 150%;
+  left: -20%;
+  min-height: 90%;
+  background: #ebebeb;
+  transform: rotate(3deg);
+  z-index: -1;
+}
+.events__content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 90px 0 90px 0;
+  gap: 15px;
+}
+.events__title {
+  font-size: 32px;
+}
+.events__text {
+  font-size: 20px;
+}
+.events__images {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 5px;
+  flex-direction: column;
+}
+.events__images__container {
+  width: 100%;
+  gap: 5px;
+  display: flex;
+  position: relative;
+}
+.events__images__container-item-1,
+.events__images__container-item-2,
+.events__images__container-item-3,
+.events__images__container-item-4 {
+  width: 50%;
+  height: 280px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.events__images__container-item-1 {
+  background-image: linear-gradient(
+      0deg,
+      rgb(31, 31, 31) 0%,
+      rgba(0, 0, 0, 0) 70%
+    ),
+    url("/public/teste.jpg");
+}
+.events__images__container-item-2 {
+  background-image: linear-gradient(
+      0deg,
+      rgb(31, 31, 31) 0%,
+      rgba(0, 0, 0, 0) 70%
+    ),
+    url("/public/teste2.jpg");
+}
+.events__images__container-item-3 {
+  background-image: linear-gradient(
+      0deg,
+      rgb(31, 31, 31) 0%,
+      rgba(0, 0, 0, 0) 70%
+    ),
+    url("/public/teste3.jpg");
+}
+.events__images__container-item-4 {
+  background-image: linear-gradient(
+      0deg,
+      rgb(31, 31, 31) 0%,
+      rgba(0, 0, 0, 0) 70%
+    ),
+    url("/public/teste.jpg");
+}
+.events__images__container-item-1:hover,
+.events__images__container-item-2:hover,
+.events__images__container-item-3:hover,
+.events__images__container-item-4:hover {
+  opacity: 0.8;
+}
+.events__images__container-text {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+}
+.open--images {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Contact */
+.contact {
+  padding: 80px 0 150px 0;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+.contact__container {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact__title {
+  font-size: 32px;
+}
+.contact__form__text {
+  text-align: center;
+}
+.contact__content {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+.contact__container__form {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact__map {
+  width: 70%;
+}
+.contact__map__link {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background-color: #1ca63a;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  align-items: center;
+}
+.contact__map__link:hover {
+  background-color: #26943e;
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact__input {
+  padding: 5px;
+}
+.contact__button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  background-color: #1ca63a;
+}
+.contact__button:hover {
+  background-color: #26943e;
+}
+
+/* FOOTER */
+.footer {
+  padding-inline: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: #ebebeb;
 }
 
 /* ANIMATION */
@@ -208,6 +399,37 @@ a {
 }
 
 /* RESPONSIVE */
+
+@media screen and (max-width: 1250px) {
+  .header__nav {
+    padding: 20px;
+  }
+  .about,
+  .events,
+  .contact {
+    padding: 80px 20px;
+  }
+  .about__images__container-item-1,
+  .about__images__container-item-2 {
+    width: 50%;
+  }
+
+  .events__images__container-item-1,
+  .events__images__container-item-2,
+  .events__images__container-item-3,
+  .events__images__container-item-4 {
+    width: 50%;
+  }
+  .contact__container {
+    width: 100%;
+  }
+  .contact__container__form {
+    width: 40%;
+  }
+  .contact__map {
+    width: 60%;
+  }
+}
 @media screen and (max-width: 800px) {
   .header__nav {
     padding: 20px;
@@ -218,9 +440,36 @@ a {
   .header--title-hidden {
     display: none;
   }
-}
-@media screen and (max-width: 1250px) {
-  .header__nav {
-    padding: 20px;
+  .about__images__container-item-1,
+  .about__images__container-item-2 {
+    width: 100%;
+  }
+
+  .about__images__container {
+    flex-wrap: wrap;
+  }
+  .events__images__container-item-1,
+  .events__images__container-item-2,
+  .events__images__container-item-3,
+  .events__images__container-item-4 {
+    width: 100%;
+  }
+  .events__images__container {
+    flex-wrap: wrap;
+  }
+  .contact__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact__container__form {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .contact__map {
+    width: 100%;
+  }
+  .contact__map__link {
+    font-size: 16px;
   }
 }
