@@ -51,8 +51,8 @@
               alt="Image 2"
             />
             <img
-              class="about__images__container-item-1"
-              src="./public/teste.jpg"
+              class="about__images__container-item-2"
+              src="/public/teste.jpg"
               onclick="openImageViewer(this)"
               alt="Image 2"
             />
@@ -73,37 +73,13 @@
               alt="Image 2"
             />
           </div>
-
-          <div class="about__images__container-hidden">
-            <div class="about__images__container">
-              <img
-                class="about__images__container-item-2"
-                src="./public/teste3.jpg"
-                onclick="openImageViewer(this)"
-                alt="Image 2"
-              />
-              <img
-                class="about__images__container-item-2"
-                src="./public/teste.jpg"
-                onclick="openImageViewer(this)"
-                alt="Image 2"
-              />
-            </div>
-            <div class="about__images__container">
-              <img
-                name="teste"
-                class="about__images__container-item-1"
-                src="./public/teste.jpg"
-                onclick="openImageViewer(this)"
-                alt="Image 1"
-              />
-              <img
-                class="about__images__container-item-2"
-                src="./public/teste2.jpg"
-                onclick="openImageViewer(this)"
-                alt="Image 2"
-              />
-            </div>
+          <div class="about__images__container hidden">
+            <img src="/public/teste.jpg" alt="Image 1" />
+            <img src="/public/teste.jpg" alt="Image 2" />
+            <img src="/public/teste.jpg" alt="Image 2" />
+            <img src="/public/teste.jpg" alt="Image 2" />
+            <img src="/public/teste.jpg" alt="Image 2" />
+            <img src="/public/teste.jpg" alt="Image 2" />
           </div>
           <span onclick="openMoreImages()" class="about__link"
             >Veja toda nossa estrutura</span
@@ -118,132 +94,12 @@
             <button class="close" onclick="closeImageViewer()">×</button>
           </div>
         </div>
-      </section>
-      <!-- EVENTOS -->
-      <section id="events" class="events">
-        <div class="events__background"></div>
-        <div class="events__content">
-          <h1 class="events__title">Eventos</h1>
 
-          <p class="about__text">Alguns dos eventos da DMD</p>
-
-          <div class="events__images">
-            <div class="events__images__container">
-              <div class="events__images__container-item-1" alt="Image 2">
-                <p class="events__images__container-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
-                  eos reiciendis vel? Porro, laborum accusantium veniam maxime
-                  atque libero.
-                </p>
-              </div>
-              <div class="events__images__container-item-2" alt="Image 2">
-                <p class="events__images__container-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
-                  eos reiciendis vel? Porro, laborum accusantium veniam maxime
-                  atque libero.
-                </p>
-              </div>
-            </div>
-
-            <div class="events__images__container">
-              <div class="events__images__container-item-3" alt="Image 2">
-                <p class="events__images__container-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
-                  eos reiciendis vel? Porro, laborum accusantium veniam maxime
-                  atque libero.
-                </p>
-              </div>
-              <div class="events__images__container-item-4" alt="Image 2">
-                <p class="events__images__container-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
-                  eos reiciendis vel? Porro, laborum accusantium veniam maxime
-                  atque libero.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div id="image-viewer">
-            <div class="container">
-              <button class="next" onclick="prevImage()">&#60;</button>
-              <img id="full-image" src="" alt="Full Image" />
-              <button class="next next2" onclick="nextImage()">&#62;</button>
-              <button class="close" onclick="closeImageViewer()">×</button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- CONTATO -->
-      <section id="contact" class="contact">
-        <div class="contact__container">
-          <h1 class="contact__title">Endereço</h1>
-          <div class="contact__content">
-            <div class="contact__map">
-              <div class="mapouter">
-                <div class="gmap_canvas">
-                  <iframe
-                    width="100%"
-                    height="335"
-                    id="gmap_canvas"
-                    src="https://maps.google.com/maps?q=Aquarela+-+Rua+Graciliano+Ramos%2C+lote+78+Aquarela+Das+Artes%2C+Sinop+-+MT%2C+78555-902&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                    frameborder="0"
-                    scrolling="no"
-                    marginheight="0"
-                    marginwidth="0"
-                  ></iframe
-                  ><style>
-                    .mapouter {
-                      position: relative;
-                      text-align: right;
-
-                      width: 100%;
-                    }</style
-                  ><style>
-                    .gmap_canvas {
-                      overflow: hidden;
-                      background: none !important;
-                      width: 100%;
-                    }
-                  </style>
-                </div>
-              </div>
-              <a class="contact__map__link" href="#">
-                <i style="font-size:32px" class="fa">&#xf232;</i>
-                Solicite a locação diretamente por WhatsApp: (66) 99915-7400
-              </a>
-            </div>
-            <div class="contact__container__form">
-              <p class="contact__form__text">
-                Nos envie uma mensagem, e assim que possível entraremos em
-                contato!
-              </p>
-              <form class="contact__form">
-                 
-                  <input placeholder="Nome" class="contact__input" type="text"   />
-               
-                <input
-                  placeholder="Telefone"
-                  class="contact__input"
-                  type="text"
-                  required
-                />
-                <textarea
-                  placeholder="Escreva sua mensagem..."
-                  class="contact__input"
-                  cols="30"
-                  
-                  rows="10"
-                ></textarea>
-                <button class="contact__button">Enviar</button>
-              </form>
-            </div>
-          </div>
-        </div>
+        <span onclick="openImageViewer(teste)" class="about__link"
+          >Veja toda nossa estrutura</span
+        >
       </section>
     </main>
-    <footer class="footer">
-      Copyright © 2024 Centro de Eventos DMD • Rua Graciliano Ramos, lote 78 Aquarela Das Artes, Sinop - MT, 78555-902 • +55 (66) 99915-7400 
-    </footer>
   </body>
   <script src="main.js"></script>
 </html>
