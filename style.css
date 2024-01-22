@@ -70,7 +70,7 @@ a {
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("./public/teste.jpg");
+    url("./public/fachada.jpg");
 }
 .banner__img-2 {
   background-image: linear-gradient(
@@ -78,7 +78,7 @@ a {
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("./public/teste2.jpg");
+    url("./public/interior.jpeg");
 }
 .banner__img-3 {
   background-image: linear-gradient(
@@ -86,7 +86,7 @@ a {
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("./public/teste3.jpg");
+    url("./public/formatura.jpg");
 }
 
 /* ABOUT */
@@ -260,7 +260,7 @@ a {
       rgb(31, 31, 31) 0%,
       rgba(0, 0, 0, 0) 70%
     ),
-    url("./public/teste.jpg");
+    url("./public/formatura.jpg");
 }
 .events__images__container-item-2 {
   background-image: linear-gradient(
@@ -268,7 +268,7 @@ a {
       rgb(31, 31, 31) 0%,
       rgba(0, 0, 0, 0) 70%
     ),
-    url("./public/teste2.jpg");
+    url("./public/formatura.jpg");
 }
 .events__images__container-item-3 {
   background-image: linear-gradient(
@@ -276,7 +276,7 @@ a {
       rgb(31, 31, 31) 0%,
       rgba(0, 0, 0, 0) 70%
     ),
-    url("./public/teste3.jpg");
+    url("./public/formatura.jpg");
 }
 .events__images__container-item-4 {
   background-image: linear-gradient(
@@ -284,7 +284,7 @@ a {
       rgb(31, 31, 31) 0%,
       rgba(0, 0, 0, 0) 70%
     ),
-    url("./public/teste.jpg");
+    url("./public/formatura.jpg");
 }
 .events__images__container-item-1:hover,
 .events__images__container-item-2:hover,
