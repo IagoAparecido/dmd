@@ -457,6 +457,10 @@ a {
   .events__images__container-item-4 {
     width: 100%;
   }
+  .about__text,
+  .events__text {
+    font-size: 18px;
+  }
   .events__images__container {
     flex-wrap: wrap;
   }
