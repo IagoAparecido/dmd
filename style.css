@@ -631,4 +631,7 @@ main {
     max-width: 100%;
     width: 370px;
   }
+  .image__text {
+    bottom: -120px;
+  }
 }
