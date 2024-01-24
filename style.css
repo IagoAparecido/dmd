@@ -9,6 +9,13 @@ a {
   text-decoration: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+}
+
 /* HEADER */
 .header {
   display: flex;
@@ -88,12 +95,35 @@ a {
     ),
     url("./public/formatura.jpg");
 }
+/* WHATS ICON */
+.icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1;
+  color: #1ca63a;
+  font-size: 48px;
+  background-color: white;
+  border-radius: 10px;
+  padding-inline: 10px;
+}
+.icon:hover {
+  color: #26943e;
+}
+.border {
+  border: 1px dotted #f1f1f1f1;
+}
+.hidden {
+  display: none;
+}
 
 /* ABOUT */
 .about {
   max-width: 1200px;
   margin: auto;
   display: flex;
+  margin-top: 30px;
   flex-direction: column;
   padding: 90px 0 90px 0;
   gap: 15px;
@@ -163,7 +193,6 @@ a {
   z-index: 1000;
   overflow-y: auto;
 }
-
 #image-viewer .container {
   display: flex;
   position: relative;
@@ -172,9 +201,25 @@ a {
   height: 100%;
   margin: 0 auto;
 }
+
+#image-viewer .container div {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  position: relative;
+}
+.image__text {
+  position: absolute;
+  background-color: #f1f1f1cb;
+  padding: 5px;
+  bottom: -50px;
+  font-size: 18px;
+}
 #image-viewer img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 1000px;
+  height: 100%;
+  max-height: 120%;
+  max-width: 120%;
 }
 #image-viewer .container .close {
   position: absolute;
@@ -203,15 +248,8 @@ a {
   position: relative;
   overflow: hidden;
 }
-.events__background {
-  position: absolute;
-  top: 50px;
-  width: 150%;
-  left: -20%;
-  min-height: 90%;
-  background: #ebebeb;
-  transform: rotate(3deg);
-  z-index: -1;
+.border {
+  border: 1px dotted #f1f1f1f1;
 }
 .events__content {
   max-width: 1200px;
@@ -321,9 +359,7 @@ a {
 .contact__title {
   font-size: 32px;
 }
-.contact__form__text {
-  text-align: center;
-}
+
 .contact__content {
   display: flex;
   gap: 30px;
@@ -336,7 +372,7 @@ a {
   gap: 10px;
 }
 .contact__map {
-  width: 70%;
+  width: 100%;
 }
 .contact__map__link {
   display: flex;
@@ -353,11 +389,7 @@ a {
 .contact__map__link:hover {
   background-color: #26943e;
 }
-.contact__form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+
 .contact__input {
   padding: 5px;
 }
@@ -373,6 +405,79 @@ a {
   background-color: #26943e;
 }
 
+/* ESPAÇO */
+.espaco {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.espaco__container {
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+}
+.espaco__all {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.espaco__title {
+  font-size: 32px;
+  width: 1200px;
+  margin: auto;
+  margin-top: 60px;
+}
+.espaco__content {
+  width: 1200px;
+  display: flex;
+  gap: 50px;
+  margin: auto;
+}
+.espaco__background {
+  position: absolute;
+  top: 30px;
+  width: 180%;
+  left: -60%;
+  min-height: 100%;
+  background: #f1f1f1;
+  /* transform: rotate(3deg); */
+  z-index: -1;
+}
+.espaco__background-2 {
+  position: absolute;
+  top: 40px;
+  width: 180%;
+  right: -50%;
+  min-height: 100%;
+  background: #f1f1f1;
+  /* transform: rotate(-3deg); */
+  z-index: -1;
+}
+.espaco__content__info {
+  width: 45%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.espaco__content__info h3 {
+  font-size: 28px;
+}
+.espaco__content__info p {
+  font-size: 20px;
+}
+.espaco__content__img {
+  background-image: url("./public/formatura.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 55%;
+}
+
 /* FOOTER */
 .footer {
   display: flex;
@@ -380,7 +485,7 @@ a {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 80px;
+  height: 100px;
   padding-inline: 20px;
   background-color: #ebebeb;
 }
@@ -423,16 +528,58 @@ a {
   .contact__container {
     width: 100%;
   }
-  .contact__container__form {
-    width: 40%;
-  }
   .contact__map {
-    width: 60%;
+    width: 100%;
+  }
+  .espaco__title {
+    width: 100%;
+    padding-inline: 20px;
+  }
+  .espaco__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 0px;
+    margin: auto;
+  }
+  .espaco__content__info {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .espaco__content__info h3 {
+    font-size: 28px;
+  }
+  .espaco__content__info p {
+    font-size: 18px;
+  }
+  .espaco__content__img {
+    background-image: url("./public/formatura.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+  }
+  .spaco__content__invert {
+    flex-direction: column-reverse;
+  }
+
+  #image-viewer img {
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 800px) {
   .banner {
     height: 50vh;
+  }
+  .icon {
+    font-size: 40px;
   }
   .header__nav {
     padding: 20px;
@@ -478,5 +625,10 @@ a {
   }
   .contact__map__link {
     font-size: 16px;
+  }
+  #image-viewer img {
+    max-height: 100%;
+    max-width: 100%;
+    width: 370px;
   }
 }

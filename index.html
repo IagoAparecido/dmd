@@ -3,16 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-    <link rel="stylesheet" href="style.css" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>DMD</title>
   </head>
   <body>
@@ -33,9 +39,18 @@
         <div class="banner__img-2 fade mySlides"></div>
         <div class="banner__img-3 fade mySlides"></div>
       </section>
+      <!-- ICON -->
+      <a
+        id="whatsappIcon"
+        href="https://wa.me/5566992815620"
+        target="_blank"
+        class="icon"
+      >
+        <i class="fa fa-whatsapp"></i>
+      </a>
       <!-- SOBRE -->
       <section id="about" class="about">
-        <h1 class="about__title">Sobre Nós</h1>
+        <h2 class="about__title">Sobre Nós</h2>
         <p class="about__text">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
           explicabo voluptates numquam nobis fugit consequatur placeat!
@@ -113,20 +128,155 @@
         <div id="image-viewer">
           <div class="container">
             <button class="next" onclick="prevImage()">&#60;</button>
-            <img id="full-image" src="" alt="Full Image" />
+            <div>
+              <img id="full-image" src="" alt="Full Image" />
+              <p class="image__text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam
+                necessitatibus alias quidem nulla quos laborum illum repudiandae
+                blanditiis quam ullam asperiores.
+              </p>
+            </div>
             <button class="next next2" onclick="nextImage()">&#62;</button>
             <button class="close" onclick="closeImageViewer()">×</button>
           </div>
         </div>
       </section>
+      <!--ESPAÇO: -->
+      <section class="espaco">
+        <!-- <div class="border"></div> -->
+
+        <h2 class="espaco__title">Espaço ideal para:</h2>
+        <div class="espaco__all">
+          <div class="espaco__container">
+            <div class="espaco__background"></div>
+            <div class="espaco__content spaco__content__invert">
+              <div class="espaco__content__info">
+                <h3>Shows</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                  quas pariatur fugit dolorum iste voluptas totam ipsam nam
+                  asperiores eos et alias suscipit, odio veniam eveniet
+                  excepturi? Ullam, deserunt laboriosam?
+                </p>
+              </div>
+              <div class="espaco__content__img">Img</div>
+            </div>
+          </div>
+          <div class="espaco__container">
+            <!-- <div class="espaco__background"></div> -->
+            <div class="espaco__content">
+              <div class="espaco__content__img">Img</div>
+              <div class="espaco__content__info">
+                <h3>Noivados e Casamentos</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                  quas pariatur fugit dolorum iste voluptas totam ipsam nam
+                  asperiores eos et alias suscipit, odio veniam eveniet
+                  excepturi? Ullam, deserunt laboriosam?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="espaco__container">
+            <div class="espaco__background-2"></div>
+            <div class="espaco__content spaco__content__invert">
+              <div class="espaco__content__info">
+                <h3>Aniversários</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                  quas pariatur fugit dolorum iste voluptas totam ipsam nam
+                  asperiores eos et alias suscipit, odio veniam eveniet
+                  excepturi? Ullam, deserunt laboriosam?
+                </p>
+              </div>
+              <div class="espaco__content__img">Img</div>
+            </div>
+          </div>
+          <div class="espaco__container">
+            <!-- <div class="espaco__background"></div> -->
+            <div class="espaco__content">
+              <div class="espaco__content__img">Img</div>
+              <div class="espaco__content__info">
+                <h3>Congressos</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                  quas pariatur fugit dolorum iste voluptas totam ipsam nam
+                  asperiores eos et alias suscipit, odio veniam eveniet
+                  excepturi? Ullam, deserunt laboriosam?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="espaco__container">
+            <div class="espaco__background"></div>
+            <div class="espaco__content spaco__content__invert">
+              <div class="espaco__content__info">
+                <h3>Colação de Grau</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                  quas pariatur fugit dolorum iste voluptas totam ipsam nam
+                  asperiores eos et alias suscipit, odio veniam eveniet
+                  excepturi? Ullam, deserunt laboriosam?
+                </p>
+              </div>
+              <div class="espaco__content__img">Img</div>
+            </div>
+          </div>
+          <div class="espaco__container">
+            <!-- <div class="espaco__background"></div> -->
+            <div class="espaco__content">
+              <div class="espaco__content__img">Img</div>
+              <div class="espaco__content__info">
+                <h3>Formaturas</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                  quas pariatur fugit dolorum iste voluptas totam ipsam nam
+                  asperiores eos et alias suscipit, odio veniam eveniet
+                  excepturi? Ullam, deserunt laboriosam?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="espaco__container">
+            <div class="espaco__background-2"></div>
+            <div class="espaco__content spaco__content__invert">
+              <div class="espaco__content__info">
+                <h3>Convenções</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                  quas pariatur fugit dolorum iste voluptas totam ipsam nam
+                  asperiores eos et alias suscipit, odio veniam eveniet
+                  excepturi? Ullam, deserunt laboriosam?
+                </p>
+              </div>
+              <div class="espaco__content__img">Img</div>
+            </div>
+          </div>
+          <div class="espaco__container">
+            <!-- <div class="espaco__background"></div> -->
+            <div class="espaco__content">
+              <div class="espaco__content__img">Img</div>
+              <div class="espaco__content__info">
+                <h3>Confraternizações</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
+                  quas pariatur fugit dolorum iste voluptas totam ipsam nam
+                  asperiores eos et alias suscipit, odio veniam eveniet
+                  excepturi? Ullam, deserunt laboriosam?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- EVENTOS -->
       <section id="events" class="events">
-        <div class="events__background"></div>
+        <div class="border"></div>
         <div class="events__content">
-          <h1 class="events__title">Eventos</h1>
-
-          <p class="about__text">Alguns dos eventos que já aconteceram na DMD - Centro de Eventos</p>
-
+          <h2 class="events__title">Eventos</h2>
+          <p class="about__text">
+            Alguns dos eventos que já aconteceram na DMD Centro de Eventos
+          </p>
           <div class="events__images">
             <div class="events__images__container">
               <div class="events__images__container-item-1" alt="Image 2">
@@ -162,28 +312,20 @@
               </div>
             </div>
           </div>
-
-          <div id="image-viewer">
-            <div class="container">
-              <button class="next" onclick="prevImage()">&#60;</button>
-              <img id="full-image" src="" alt="Full Image" />
-              <button class="next next2" onclick="nextImage()">&#62;</button>
-              <button class="close" onclick="closeImageViewer()">×</button>
-            </div>
-          </div>
         </div>
       </section>
       <!-- CONTATO -->
+      <div class="border"></div>
       <section id="contact" class="contact">
         <div class="contact__container">
-          <h1 class="contact__title">Endereço</h1>
+          <h2 class="contact__title">Endereço</h2>
           <div class="contact__content">
             <div class="contact__map">
               <div class="mapouter">
                 <div class="gmap_canvas">
                   <iframe
                     width="100%"
-                    height="335"
+                    height="400"
                     id="gmap_canvas"
                     src="https://maps.google.com/maps?q=Aquarela+-+Rua+Graciliano+Ramos%2C+lote+78+Aquarela+Das+Artes%2C+Sinop+-+MT%2C+78555-902&t=&z=13&ie=UTF8&iwloc=&output=embed"
                     frameborder="0"
@@ -195,7 +337,6 @@
                     .mapouter {
                       position: relative;
                       text-align: right;
-
                       width: 100%;
                     }</style
                   ><style>
@@ -207,39 +348,22 @@
                   </style>
                 </div>
               </div>
-              <a class="contact__map__link" href="#">
-                <i style="font-size:32px" class="fa">&#xf232;</i>
-                Solicite a locação diretamente por WhatsApp: (66) 99915-7400
+              <a
+                class="contact__map__link"
+                href="https://wa.me/5566992815620"
+                target="_blank"
+              >
+                <i style="font-size: 32px" class="fa">&#xf232;</i>
+                Solicite a locação diretamente por WhatsApp: +55 (66) 99281-5620
               </a>
-            </div>
-            <div class="contact__container__form">
-              <p class="contact__form__text">
-                Nos envie uma mensagem, e assim que possível entraremos em
-                contato!
-              </p>
-              <form class="contact__form">
-                <input placeholder="Nome" class="contact__input" type="text" />
-               
-                <input
-                  placeholder="Telefone"
-                  class="contact__input"
-                  type="text"
-                />
-                <textarea
-                  placeholder="Escreva sua mensagem..."
-                  class="contact__input"
-                  cols="30"
-                  rows="10"
-                ></textarea>
-                <button class="contact__button">Enviar</button>
-              </form>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <footer class="footer">
-      Copyright © 2024 DMD Centro de Eventos • Rua Graciliano Ramos, lote 78 Aquarela Das Artes, Sinop - MT, 78555-902 • +55 (66) 9281-5620
+    <footer id="footer" class="footer">
+      Copyright © 2024 DMD Centro de Eventos • Rua Graciliano Ramos, lote 78
+      Aquarela Das Artes, Sinop - MT, 78555-902 • +55 (66) 99281-5620
     </footer>
   </body>
   <script src="main.js"></script>

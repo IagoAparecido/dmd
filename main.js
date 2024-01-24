@@ -77,3 +77,16 @@ function openMoreImages() {
     moreImages.classList.add("open--images");
   }
 }
+
+// Função do icon de acordo com o scroll
+window.addEventListener("scroll", function () {
+  var icon = document.querySelector(".icon");
+  var contactSection = document.getElementById("contact");
+  var offset = contactSection.offsetTop;
+
+  if (window.pageYOffset > offset) {
+    icon.classList.add("hidden");
+  } else {
+    icon.classList.remove("hidden");
+  }
+});
