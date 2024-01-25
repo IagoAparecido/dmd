@@ -97,13 +97,66 @@ var modalContent = document.querySelector(".modal-content");
 var btns = document.querySelectorAll(".events__images__container-item");
 var span = document.getElementsByClassName("close-modal")[0];
 
-function openModal(images) {
+// Map button IDs to content arrays
+var contentMappings = {
+  "event-1": [
+    { type: "image", src: "./public/formatura.jpg" },
+    { type: "image", src: "./public/formatura.jpg" },
+    { type: "image", src: "./public/formatura.jpg" },
+    { type: "image", src: "./public/formatura.jpg" },
+    { type: "image", src: "./public/formatura.jpg" },
+    { type: "image", src: "./public/formatura.jpg" },
+    { type: "image", src: "./public/formatura.jpg" },
+  ],
+  "event-2": [
+    { type: "image", src: "./public/evento1/show.jpeg" },
+    { type: "image", src: "./public/evento1/show2.jpeg" },
+    { type: "image", src: "./public/evento1/show3.jpeg" },
+    { type: "image", src: "./public/evento1/show4.jpeg" },
+    { type: "image", src: "./public/evento1/show5.jpeg" },
+    { type: "image", src: "./public/evento1/show6.jpeg" },
+    { type: "video", src: "./public/evento1/videoShow.mp4" },
+    { type: "video", src: "./public/evento1/videoShow2.mp4" },
+  ],
+  "event-3": [
+    { type: "image", src: "./public/evento2/casamento.jpeg" },
+    { type: "image", src: "./public/evento2/casamento2.jpeg" },
+    { type: "image", src: "./public/evento2/casamento3.jpeg" },
+    { type: "image", src: "./public/evento2/casamento4.jpeg" },
+    { type: "image", src: "./public/evento2/casamento5.jpeg" },
+    { type: "image", src: "./public/evento2/casamento6.jpeg" },
+    { type: "video", src: "./public/evento2/casamentoVideo.mp4" },
+    { type: "video", src: "./public/evento2/casamentoVideo3.mp4" },
+  ],
+  "event-4": [
+    { type: "image", src: "./public/evento3/confra.jpeg" },
+    { type: "image", src: "./public/evento3/confra2.jpeg" },
+    { type: "video", src: "./public/evento3/confraVideo.mp4" },
+    { type: "video", src: "./public/evento3/confraVideo2.mp4" },
+  ],
+};
+
+function openModal(content) {
   modalContent.innerHTML = "";
 
-  images.forEach(function (imageUrl) {
-    var img = document.createElement("img");
-    img.src = imageUrl;
-    modalContent.appendChild(img);
+  content.forEach(function (item) {
+    if (item.type === "image") {
+      var img = document.createElement("img");
+      img.src = item.src;
+      modalContent.appendChild(img);
+    } else if (item.type === "video") {
+      var video = document.createElement("video");
+      video.style.maxWidth = "100%";
+      video.style.maxHeight = "400px";
+      video.controls = true;
+
+      var source = document.createElement("source");
+      source.src = item.src;
+      source.type = "video/mp4";
+
+      video.appendChild(source);
+      modalContent.appendChild(video);
+    }
   });
 
   modal.style.display = "block";
@@ -112,50 +165,9 @@ function openModal(images) {
 // Event listeners for each item
 btns.forEach(function (btn) {
   btn.onclick = function () {
-    if (btn.id === "event-1") {
-      openModal([
-        "./public/formatura.jpg",
-        "./public/formatura.jpg",
-        "./public/formatura.jpg",
-        "./public/formatura.jpg",
-        "./public/formatura.jpg",
-        "./public/formatura.jpg",
-        "./public/formatura.jpg",
-        "./public/formatura.jpg",
-      ]);
-    } else if (btn.id === "event-2") {
-      openModal([
-        "./public/fachada.jpg",
-        "./public/fachada.jpg",
-        "./public/fachada.jpg",
-        "./public/fachada.jpg",
-        "./public/fachada.jpg",
-        "./public/fachada.jpg",
-        "./public/fachada.jpg",
-        "./public/fachada.jpg",
-      ]);
-    } else if (btn.id === "event-3") {
-      openModal([
-        "./public/interior.jpeg",
-        "./public/interior.jpeg",
-        "./public/interior.jpeg",
-        "./public/interior.jpeg",
-        "./public/interior.jpeg",
-        "./public/interior.jpeg",
-        "./public/interior.jpeg",
-        "./public/interior.jpeg",
-      ]);
-    } else if (btn.id === "event-4") {
-      openModal([
-        "./public/fachada2.jpg",
-        "./public/fachada2.jpg",
-        "./public/fachada2.jpg",
-        "./public/fachada2.jpg",
-        "./public/fachada2.jpg",
-        "./public/fachada2.jpg",
-        "./public/fachada2.jpg",
-        "./public/fachada2.jpg",
-      ]);
+    var buttonId = btn.id;
+    if (contentMappings.hasOwnProperty(buttonId)) {
+      openModal(contentMappings[buttonId]);
     }
   };
 });

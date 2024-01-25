@@ -66,6 +66,7 @@ main {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .fade {
   animation-name: fade;
@@ -288,6 +289,7 @@ main {
   transition: 0.3s;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -306,7 +308,7 @@ main {
       rgb(31, 31, 31) 0%,
       rgba(0, 0, 0, 0) 70%
     ),
-    url("./public/formatura.jpg");
+    url("./public/show.jpeg");
 }
 .events__images__container-item-3 {
   background-image: linear-gradient(
@@ -314,7 +316,7 @@ main {
       rgb(31, 31, 31) 0%,
       rgba(0, 0, 0, 0) 70%
     ),
-    url("./public/formatura.jpg");
+    url("./public/evento2/casamento.jpeg");
 }
 .events__images__container-item-4 {
   background-image: linear-gradient(
@@ -322,7 +324,7 @@ main {
       rgb(31, 31, 31) 0%,
       rgba(0, 0, 0, 0) 70%
     ),
-    url("./public/formatura.jpg");
+    url("./public/confra.jpeg");
 }
 .events__images__container-item-1:hover,
 .events__images__container-item-2:hover,
@@ -367,6 +369,9 @@ main {
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+.modal-content img {
+  max-height: 500px;
 }
 
 /* The Close Button */
@@ -514,10 +519,29 @@ main {
   font-size: 20px;
 }
 .espaco__content__img {
-  background-image: url("./public/formatura.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   width: 55%;
+}
+.espaco__content__img-casamento {
+  background-image: url("./public/casamento.jpeg");
+}
+.espaco__content__img-show {
+  background-image: url("./public/show.jpeg");
+}
+.espaco__content__img-aniversario {
+  background-image: url("./public/aniversario.jpeg");
+}
+.espaco__content__img-congresso {
+  background-image: url("./public/congresso.jpeg");
+}
+
+.espaco__content__img-formatura {
+  background-image: url("./public/formatura.jpg");
+}
+.espaco__content__img-confra {
+  background-image: url("./public/confra.jpeg");
 }
 
 /* FOOTER */
@@ -603,6 +627,7 @@ main {
     background-image: url("./public/formatura.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     width: 100%;
     height: 300px;
   }
@@ -678,10 +703,11 @@ main {
   }
 
   .modal {
-    padding: 20px;
+    padding: 0;
   }
   .modal-content {
     width: 100%;
+    padding: 10px;
   }
   .modal-content img {
     width: 100%;
