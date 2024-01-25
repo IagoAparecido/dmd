@@ -624,7 +624,6 @@ main {
     font-size: 18px;
   }
   .espaco__content__img {
-    background-image: url("./public/formatura.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
