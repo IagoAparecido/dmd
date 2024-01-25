@@ -90,3 +90,82 @@ window.addEventListener("scroll", function () {
     icon.classList.remove("hidden");
   }
 });
+
+// Modal de imagens
+var modal = document.getElementById("myModal");
+var modalContent = document.querySelector(".modal-content");
+var btns = document.querySelectorAll(".events__images__container-item");
+var span = document.getElementsByClassName("close-modal")[0];
+
+function openModal(images) {
+  modalContent.innerHTML = "";
+
+  images.forEach(function (imageUrl) {
+    var img = document.createElement("img");
+    img.src = imageUrl;
+    modalContent.appendChild(img);
+  });
+
+  modal.style.display = "block";
+}
+
+// Event listeners for each item
+btns.forEach(function (btn) {
+  btn.onclick = function () {
+    if (btn.id === "event-1") {
+      openModal([
+        "./public/formatura.jpg",
+        "./public/formatura.jpg",
+        "./public/formatura.jpg",
+        "./public/formatura.jpg",
+        "./public/formatura.jpg",
+        "./public/formatura.jpg",
+        "./public/formatura.jpg",
+        "./public/formatura.jpg",
+      ]);
+    } else if (btn.id === "event-2") {
+      openModal([
+        "./public/fachada.jpg",
+        "./public/fachada.jpg",
+        "./public/fachada.jpg",
+        "./public/fachada.jpg",
+        "./public/fachada.jpg",
+        "./public/fachada.jpg",
+        "./public/fachada.jpg",
+        "./public/fachada.jpg",
+      ]);
+    } else if (btn.id === "event-3") {
+      openModal([
+        "./public/interior.jpeg",
+        "./public/interior.jpeg",
+        "./public/interior.jpeg",
+        "./public/interior.jpeg",
+        "./public/interior.jpeg",
+        "./public/interior.jpeg",
+        "./public/interior.jpeg",
+        "./public/interior.jpeg",
+      ]);
+    } else if (btn.id === "event-4") {
+      openModal([
+        "./public/fachada2.jpg",
+        "./public/fachada2.jpg",
+        "./public/fachada2.jpg",
+        "./public/fachada2.jpg",
+        "./public/fachada2.jpg",
+        "./public/fachada2.jpg",
+        "./public/fachada2.jpg",
+        "./public/fachada2.jpg",
+      ]);
+    }
+  };
+});
+
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
