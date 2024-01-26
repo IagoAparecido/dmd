@@ -78,7 +78,7 @@ main {
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("./public/fachada.jpg");
+    url("./public/local/fachada.jpg");
 }
 .banner__img-2 {
   background-image: linear-gradient(
@@ -86,7 +86,7 @@ main {
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("./public/interior.jpeg");
+    url("./public/local/IMG_9134.jpg");
 }
 .banner__img-3 {
   background-image: linear-gradient(
