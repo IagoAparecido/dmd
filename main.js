@@ -92,6 +92,7 @@ function showImage() {
 }
 function closeImageViewer() {
   imageViewer.style.display = "none";
+  pauseVideo();
 }
 function prevImage() {
   currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
@@ -166,6 +167,7 @@ var contentMappings = {
   ],
 };
 
+var openedVideos = [];
 function openModal(content) {
   modalContent.innerHTML = "";
 
@@ -176,6 +178,9 @@ function openModal(content) {
       modalContent.appendChild(img);
     } else if (item.type === "video") {
       var video = document.createElement("video");
+      video.id = "modalVideo" + openedVideos.length;
+      openedVideos.push(video);
+
       video.style.maxWidth = "100%";
       video.style.maxHeight = "400px";
       video.controls = true;
@@ -203,12 +208,22 @@ btns.forEach(function (btn) {
 
 span.onclick = function () {
   modal.style.display = "none";
+  pauseVideo();
 };
 
 window.onclick = function (event) {
-  console.log(event.target);
   if (event.target == modal || event.target == ContainerImageViewer) {
     modal.style.display = "none";
     closeImageViewer();
+    pauseVideo();
   }
 };
+
+//pausar video
+function pauseVideo() {
+  openedVideos.forEach(function (videoElement) {
+    if (videoElement && !videoElement.paused && !videoElement.ended) {
+      videoElement.pause();
+    }
+  });
+}
