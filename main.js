@@ -48,8 +48,37 @@ function carousel() {
 var currentImageIndex = 0;
 var images = document.querySelectorAll(".about__images__container img");
 var imageViewer = document.getElementById("image-viewer");
+var ContainerImageViewer = document.querySelector(".container");
 var fullImage = document.getElementById("full-image");
 var moreImages = document.querySelector(".about__images__container-hidden");
+
+var imageTexts = [
+  "Com área construída de 2.451,05m², composto de, 1.950m² de salão de festa, pé-direito de 5m.",
+  "",
+  "",
+  "",
+  "2 sanitários femininos e 2 masculinos um com 114,67m² e outro com 67,50m² de área construída.",
+  "",
+  "",
+  "2 cozinhas uma com 74,10 m² e outra 67,50m² de área construída.",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "Palco de 112,15m² e camarim de 46,85m², incluso área de estacionamento, contendo todas as instalações hidráulicas e elétricas, tais como lâmpadas, 42 aparelhos de ar condicionados, torneiras, válvulas de descarga, cerâmicas, vidro, azulejos, portas de vidro duplo e esquadrias de PVC, etc.,",
+  "",
+  "",
+  "",
+  "",
+  "",
+];
 
 function openImageViewer(clickedImage) {
   currentImageIndex = Array.from(images).indexOf(clickedImage);
@@ -57,6 +86,8 @@ function openImageViewer(clickedImage) {
 }
 function showImage() {
   fullImage.src = images[currentImageIndex].src;
+  document.querySelector(".image__text").textContent =
+    imageTexts[currentImageIndex];
   imageViewer.style.display = "block";
 }
 function closeImageViewer() {
@@ -97,7 +128,6 @@ var modalContent = document.querySelector(".modal-content");
 var btns = document.querySelectorAll(".events__images__container-item");
 var span = document.getElementsByClassName("close-modal")[0];
 
-// Map button IDs to content arrays
 var contentMappings = {
   "event-1": [
     { type: "image", src: "./public/formatura.jpg" },
@@ -162,7 +192,6 @@ function openModal(content) {
   modal.style.display = "block";
 }
 
-// Event listeners for each item
 btns.forEach(function (btn) {
   btn.onclick = function () {
     var buttonId = btn.id;
@@ -177,7 +206,9 @@ span.onclick = function () {
 };
 
 window.onclick = function (event) {
-  if (event.target == modal) {
+  console.log(event.target);
+  if (event.target == modal || event.target == ContainerImageViewer) {
     modal.style.display = "none";
+    closeImageViewer();
   }
 };

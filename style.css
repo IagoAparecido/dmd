@@ -12,7 +12,7 @@ a {
 main {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 0px;
   position: relative;
 }
 
@@ -38,6 +38,8 @@ main {
 .header__menu {
   display: flex;
   gap: 15px;
+  justify-content: center;
+  align-items: center;
   z-index: 10;
 }
 .header__menu-item {
@@ -51,6 +53,14 @@ main {
 .header--background-white {
   background-color: white;
   color: #0a0a0a;
+}
+.header__icon {
+  cursor: pointer;
+  color: #1ca63a;
+  font-size: 22px;
+}
+.header__icon:hover {
+  color: #26943e;
 }
 
 /* MAIN */
@@ -112,9 +122,11 @@ main {
 .icon:hover {
   color: #26943e;
 }
+
 .border {
   border: 1px dotted #f1f1f1f1;
 }
+
 .hidden {
   display: none;
 }
@@ -148,6 +160,11 @@ main {
   gap: 5px;
   display: flex;
   position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.about__images__container-item:hover {
+  opacity: 0.9;
 }
 .about__images__container-hidden {
   display: none;
@@ -211,9 +228,11 @@ main {
 }
 .image__text {
   position: absolute;
-  background-color: #f1f1f1cb;
+  background-color: #ffffff;
+  opacity: 1;
+  width: 100%;
   padding: 5px;
-  bottom: -50px;
+  bottom: 0px;
   font-size: 18px;
 }
 #image-viewer img {
@@ -374,7 +393,7 @@ main {
   max-height: 500px;
 }
 
-/* The Close Button */
+/* Close Button */
 .close-modal {
   color: #aaa;
   float: right;
@@ -391,7 +410,7 @@ main {
 
 /* Contact */
 .contact {
-  padding: 50px 0 150px 0;
+  padding: 90px 0 150px 0;
   width: 100%;
   position: relative;
   margin: auto;
@@ -470,7 +489,7 @@ main {
 .espaco__all {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0px;
 }
 .espaco__title {
   font-size: 32px;
@@ -481,7 +500,7 @@ main {
 .espaco__content {
   width: 1200px;
   display: flex;
-  gap: 50px;
+  gap: 30px;
   margin: auto;
 }
 .espaco__background {
